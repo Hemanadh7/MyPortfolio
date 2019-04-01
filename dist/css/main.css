@@ -44,6 +44,8 @@
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
+    .menu-nav .navfont {
+      font-size: 100%; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
@@ -88,6 +90,12 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
 
 * {
   box-sizing: border-box; }
@@ -180,12 +188,49 @@ main {
     padding: 0.5rem;
     border-bottom: #e0dd0d 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #e0dd0d;
+    color: #000; }
+
+.btn-dark {
+  background: #333333;
+  color: #fff; }
+
+.btn-light {
+  background: gray;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: black;
+  background: #4f4e05;
   color: #f8f8f8;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -203,11 +248,13 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 75vh;
+    height: 80vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
+    .menu-nav .navfont {
+      font-size: 75%; }
   .menu-branding {
-    height: 25vh;
+    height: 20vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url("../img/portrait_small.jpg");
@@ -215,8 +262,12 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }

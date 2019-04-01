@@ -70,6 +70,10 @@
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
+    .navfont {
+      font-size: 100%;
+    }
+
     &.show {
       //Slide in from top
       transform: translate3d(0, 0, 0);
@@ -126,7 +130,7 @@
 }
 
 // Delay each nav item slide by 0.1s
-@for $x from 1 through 4 {
+@for $x from 1 through 6 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }
