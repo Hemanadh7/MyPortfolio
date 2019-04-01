@@ -200,6 +200,24 @@ main {
       border-color: #e0dd0d;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes .coninfo {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 5rem;
+    transition: all 0.5s ease-out; }
+    .boxes .coninfo:hover {
+      background: #e0dd0d;
+      color: #000; }
+      .boxes .coninfo:hover span {
+        color: #000; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -267,7 +285,14 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .boxes .coninfo {
+    font-size: 1.5rem; }
   .projects {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
