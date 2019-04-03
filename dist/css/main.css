@@ -168,6 +168,7 @@ main {
       margin-top: 20vh; }
 
 .about-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
@@ -203,6 +204,22 @@ main {
       border-color: #e0dd0d;
       transition: all 0.5s ease-out; }
 
+.exp-info .exp-head {
+  width: 100%;
+  background: #1a1a1a;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.exp-info .exp-detail {
+  margin-top: 3vh;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.exp-info .follow-me {
+  margin-top: 5vh;
+  text-align: center; }
+  .exp-info .follow-me:hover {
+    background: #1a1a1a; }
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -220,6 +237,12 @@ main {
       color: #000; }
       .boxes .coninfo:hover span {
         color: #000; }
+  .boxes .quote {
+    width: 100%;
+    margin-top: 10vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+    .boxes .quote:hover {
+      background: #1a1a1a; }
 
 .btn, .btn-dark, .btn-light {
   display: block;

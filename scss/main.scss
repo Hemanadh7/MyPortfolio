@@ -75,6 +75,7 @@ main {
 }
 
 .about-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
@@ -131,6 +132,30 @@ main {
   }
 }
 
+// Experience Page
+.exp-info {
+  .exp-head {
+    width: 100%;
+    background: lighten($primarycolour, 10);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .exp-detail {
+    margin-top: 3vh;
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .follow-me {
+    margin-top: 5vh;
+    text-align: center;
+
+    &:hover {
+      background: lighten($primarycolour, 10);
+    }
+  }
+}
+
 // Contact Page
 .boxes {
   display: flex;
@@ -153,6 +178,16 @@ main {
       span {
         color: set-text-color($secondarycolor);
       }
+    }
+  }
+
+  .quote {
+    width: 100%;
+    margin-top: 10vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+    &:hover {
+      background: lighten($primarycolour, 10);
     }
   }
 }
