@@ -96,14 +96,17 @@ main {
   }
 
   .job-1 {
+    font-size: 1.2rem;
     grid-area: job1;
   }
 
   .job-2 {
+    font-size: 1.2rem;
     grid-area: job2;
   }
 
   .job-3 {
+    font-size: 1.2rem;
     grid-area: job3;
   }
 
@@ -112,6 +115,17 @@ main {
     padding: 0.5rem;
     border-bottom: $secondarycolor 5px solid;
   }
+
+  .interests {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+
+.interests-detail {
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 //work/projects
@@ -152,6 +166,58 @@ main {
 
     &:hover {
       background: lighten($primarycolour, 10);
+    }
+  }
+}
+
+// DevLog Page
+.devlog-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  .title {
+    background: lighten($primarycolour, 10);
+  }
+
+  .note {
+    font-size: 1.2rem;
+  }
+
+  .game-dev-decisions {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .gameflow-detail {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+
+  .con-ref {
+    margin-top: 5vh;
+    text-align: center;
+
+    &:hover {
+      background: lighten($primarycolour, 10);
+    }
+  }
+
+  .ref-img {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: grid;
+    justify-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 0.5fr);
+
+    img {
+      width: 100%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
     }
   }
 }

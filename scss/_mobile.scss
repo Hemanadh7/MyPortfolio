@@ -70,6 +70,13 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .devlog-info {
+    .ref-img {
+      justify-items: center;
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 // SmartPhones

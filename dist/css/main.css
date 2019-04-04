@@ -182,15 +182,26 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .about-info .job-1 {
+    font-size: 1.2rem;
     grid-area: job1; }
   .about-info .job-2 {
+    font-size: 1.2rem;
     grid-area: job2; }
   .about-info .job-3 {
+    font-size: 1.2rem;
     grid-area: job3; }
   .about-info .job {
     background: #0d0d0d;
     padding: 0.5rem;
     border-bottom: #e0dd0d 5px solid; }
+  .about-info .interests {
+    font-size: 1.5rem;
+    text-align: left; }
+
+.interests-detail {
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
 
 .projects {
   display: grid;
@@ -219,6 +230,38 @@ main {
   text-align: center; }
   .exp-info .follow-me:hover {
     background: #1a1a1a; }
+
+.devlog-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+  .devlog-info .title {
+    background: #1a1a1a; }
+  .devlog-info .note {
+    font-size: 1.2rem; }
+  .devlog-info .game-dev-decisions {
+    text-align: left;
+    font-size: 1.2rem; }
+  .devlog-info .gameflow-detail {
+    text-align: left;
+    font-size: 1.2rem; }
+  .devlog-info .con-ref {
+    margin-top: 5vh;
+    text-align: center; }
+    .devlog-info .con-ref:hover {
+      background: #1a1a1a; }
+  .devlog-info .ref-img {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: grid;
+    justify-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 0.5fr); }
+    .devlog-info .ref-img img {
+      width: 100%;
+      border: 3px #fff solid; }
+      .devlog-info .ref-img img:hover {
+        opacity: 0.5;
+        border-color: #e0dd0d;
+        transition: all 0.5s ease-out; }
 
 .boxes {
   display: flex;
@@ -308,7 +351,10 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .devlog-info .ref-img {
+    justify-items: center;
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main {
