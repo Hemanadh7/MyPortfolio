@@ -14,6 +14,9 @@ var modal2 = document.getElementById("simpleModal2");
 var modal3 = document.getElementById("simpleModal3");
 var modal4 = document.getElementById("simpleModal4");
 var modal5 = document.getElementById("simpleModal5");
+var modal6 = document.getElementById("simpleModal6");
+var modal7 = document.getElementById("simpleModal7");
+var modal8 = document.getElementById("simpleModal8");
 // Get open modal buttons
 //------------------------------var modalBtn = document.getElementById("Button");
 var modalBtn1 = document.getElementById("Button1");
@@ -21,12 +24,18 @@ var modalBtn2 = document.getElementById("Button2");
 var modalBtn3 = document.getElementById("Button3");
 var modalBtn4 = document.getElementById("Button4");
 var modalBtn5 = document.getElementById("Button5");
+var modalBtn6 = document.getElementById("Button6");
+var modalBtn7 = document.getElementById("Button7");
+var modalBtn8 = document.getElementById("Button8");
 // Get close buttons
 var closeBtn1 = document.getElementById("close1");
 var closeBtn2 = document.getElementById("close2");
 var closeBtn3 = document.getElementById("close3");
 var closeBtn4 = document.getElementById("close4");
 var closeBtn5 = document.getElementById("close5");
+var closeBtn6 = document.getElementById("close6");
+var closeBtn7 = document.getElementById("close7");
+var closeBtn8 = document.getElementById("close8");
 
 menuBtn.addEventListener("click", toggleMenu);
 
@@ -36,6 +45,9 @@ modalBtn2.addEventListener("click", openModal2);
 modalBtn3.addEventListener("click", openModal3);
 modalBtn4.addEventListener("click", openModal4);
 modalBtn5.addEventListener("click", openModal5);
+modalBtn6.addEventListener("click", openModal6);
+modalBtn7.addEventListener("click", openModal7);
+modalBtn8.addEventListener("click", openModal8);
 //-----------------------------modalBtn.addEventListener("click", openModal);
 //Listen for close clicks
 closeBtn1.addEventListener("click", closeModal1);
@@ -43,6 +55,9 @@ closeBtn2.addEventListener("click", closeModal2);
 closeBtn3.addEventListener("click", closeModal3);
 closeBtn4.addEventListener("click", closeModal4);
 closeBtn5.addEventListener("click", closeModal5);
+closeBtn6.addEventListener("click", closeModal6);
+closeBtn7.addEventListener("click", closeModal7);
+closeBtn8.addEventListener("click", closeModal8);
 
 //Listen for outside click
 window.addEventListener("click", outsideClick);
@@ -63,6 +78,15 @@ function openModal4() {
 function openModal5() {
   modal5.style.display = "block";
 }
+function openModal6() {
+  modal6.style.display = "block";
+}
+function openModal7() {
+  modal7.style.display = "block";
+}
+function openModal8() {
+  modal8.style.display = "block";
+}
 
 //Function to close modal
 function closeModal1() {
@@ -80,6 +104,15 @@ function closeModal4() {
 function closeModal5() {
   modal5.style.display = "none";
 }
+function closeModal6() {
+  modal6.style.display = "none";
+}
+function closeModal7() {
+  modal7.style.display = "none";
+}
+function closeModal8() {
+  modal8.style.display = "none";
+}
 
 //Function to close modal if outside click
 function outsideClick(e) {
@@ -93,6 +126,12 @@ function outsideClick(e) {
     modal4.style.display = "none";
   } else if (e.target == modal5) {
     modal5.style.display = "none";
+  } else if (e.target == modal6) {
+    modal6.style.display = "none";
+  } else if (e.target == modal7) {
+    modal7.style.display = "none";
+  } else if (e.target == modal8) {
+    modal8.style.display = "none";
   }
 }
 
