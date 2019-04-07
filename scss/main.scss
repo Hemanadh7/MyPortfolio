@@ -262,6 +262,125 @@ main {
       text-align: left;
     }
   }
+
+  .project5 {
+    img {
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
+    }
+
+    .pro5-des {
+      margin-top: 2.5vh;
+      text-align: left;
+    }
+  }
+
+  .project6 {
+    img {
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
+    }
+
+    .pro6-des {
+      margin-top: 2.5vh;
+      text-align: left;
+    }
+  }
+
+  .project7 {
+    img {
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
+    }
+
+    .pro7-des {
+      margin-top: 2.5vh;
+      text-align: left;
+    }
+  }
+
+  .project8 {
+    img {
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height: 50%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
+    }
+
+    .pro8-des {
+      margin-top: 2.5vh;
+      text-align: left;
+    }
+  }
+
+  .project9,
+  .project10,
+  .project11 {
+    img {
+      margin-top: 2vh;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      height: 80%;
+      border: 3px #fff solid;
+
+      &:hover {
+        opacity: 0.5;
+        border-color: $secondarycolor;
+        @include easeOut;
+      }
+    }
+
+    .pro9-des,
+    .pro10-des,
+    .pro11-des {
+      margin-top: 2.5vh;
+      text-align: left;
+    }
+  }
 }
 
 .closeBtn {
