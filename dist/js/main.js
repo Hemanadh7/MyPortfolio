@@ -20,7 +20,7 @@ var modal8 = document.getElementById("simpleModal8");
 var modal9 = document.getElementById("simpleModal9");
 var modal10 = document.getElementById("simpleModal10");
 var modal11 = document.getElementById("simpleModal11");
-var modal12 = document.getElementById("simpleModal12");
+//var modal12 = document.getElementById("simpleModal12");
 // Get open modal buttons
 //------------------------------var modalBtn = document.getElementById("Button");
 var modalBtn1 = document.getElementById("Button1");
@@ -34,7 +34,7 @@ var modalBtn8 = document.getElementById("Button8");
 var modalBtn9 = document.getElementById("Button9");
 var modalBtn10 = document.getElementById("Button10");
 var modalBtn11 = document.getElementById("Button11");
-var modalBtn12 = document.getElementById("Button12");
+//var modalBtn12 = document.getElementById("Button12");
 // Get close buttons
 var closeBtn1 = document.getElementById("close1");
 var closeBtn2 = document.getElementById("close2");
@@ -47,7 +47,7 @@ var closeBtn8 = document.getElementById("close8");
 var closeBtn9 = document.getElementById("close9");
 var closeBtn10 = document.getElementById("close10");
 var closeBtn11 = document.getElementById("close11");
-var closeBtn12 = document.getElementById("close12");
+//var closeBtn12 = document.getElementById("close12");
 
 menuBtn.addEventListener("click", toggleMenu);
 
@@ -63,7 +63,7 @@ modalBtn8.addEventListener("click", openModal8);
 modalBtn9.addEventListener("click", openModal9);
 modalBtn10.addEventListener("click", openModal10);
 modalBtn11.addEventListener("click", openModal11);
-modalBtn12.addEventListener("click", openModal12);
+//modalBtn12.addEventListener("click", openModal12);
 //-----------------------------modalBtn.addEventListener("click", openModal);
 //Listen for close clicks
 closeBtn1.addEventListener("click", closeModal1);
@@ -77,7 +77,7 @@ closeBtn8.addEventListener("click", closeModal8);
 closeBtn9.addEventListener("click", closeModal9);
 closeBtn10.addEventListener("click", closeModal10);
 closeBtn11.addEventListener("click", closeModal11);
-closeBtn12.addEventListener("click", closeModal12);
+//closeBtn12.addEventListener("click", closeModal12);
 
 //Listen for outside click
 window.addEventListener("click", outsideClick);
@@ -116,9 +116,9 @@ function openModal10() {
 function openModal11() {
   modal11.style.display = "block";
 }
-function openModal12() {
+/*function openModal12() {
   modal12.style.display = "block";
-}
+}*/
 
 //Function to close modal
 function closeModal1() {
@@ -154,9 +154,9 @@ function closeModal10() {
 function closeModal11() {
   modal11.style.display = "none";
 }
-function closeModal12() {
+/*function closeModal12() {
   modal12.style.display = "none";
-}
+}*/
 
 //Function to close modal if outside click
 function outsideClick(e) {
