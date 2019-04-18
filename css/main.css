@@ -1,0 +1,549 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #f8f8f8;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: black;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav .navfont {
+      font-size: 100%; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: black;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../img/portrait.jpg");
+      border-radius: 50%;
+      border: solid 3px #e0dd0d; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #e0dd0d; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #f8f8f8;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #e0dd0d; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
+
+.nav-item:nth-child(7) {
+  transition-delay: 0.7s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: black;
+  color: #f8f8f8;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.7); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 4rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(5, 5, 5, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #e0dd0d; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh-60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #e0dd0d;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #e0dd0d 3px solid; }
+  .about-info .bio {
+    text-align: left;
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    font-size: 1.2rem;
+    grid-area: job1; }
+  .about-info .job-2 {
+    font-size: 1.2rem;
+    grid-area: job2; }
+  .about-info .job-3 {
+    font-size: 1.2rem;
+    grid-area: job3; }
+  .about-info .job {
+    background: #0d0d0d;
+    padding: 0.5rem;
+    border-bottom: #e0dd0d 5px solid; }
+  .about-info .interests {
+    font-size: 1.5rem;
+    text-align: left; }
+
+.interests-detail {
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(1, 1, 1, 0.7); }
+
+.modal-content {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #333333;
+  color: #fff;
+  border-radius: 10px;
+  margin: 10% auto;
+  padding: 10px;
+  width: 90%; }
+  .modal-content .project1 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project1 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project1 .pro1-des {
+    margin-top: 3vh;
+    text-align: left; }
+  .modal-content .project2 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project2 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project2 .pro2-des {
+    margin-top: 3vh;
+    text-align: left; }
+  .modal-content .project3 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project3 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project3 .pro3-des {
+    margin-top: 3vh;
+    text-align: left; }
+  .modal-content .project4 .pro-images4 {
+    margin-top: 2vh;
+    display: grid;
+    grid-gap: 15px;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr); }
+    .modal-content .project4 .pro-images4 img {
+      width: 90%;
+      border: 3px #fff solid; }
+      .modal-content .project4 .pro-images4 img:hover {
+        opacity: 0.5;
+        border-color: #e0dd0d;
+        transition: all 0.5s ease-out; }
+  .modal-content .project4 .pro4-des {
+    margin-top: 3vh;
+    text-align: left; }
+  .modal-content .project5 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project5 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project5 .pro5-des {
+    margin-top: 2.5vh;
+    text-align: left; }
+  .modal-content .project6 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project6 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project6 .pro6-des {
+    margin-top: 2.5vh;
+    text-align: left; }
+  .modal-content .project7 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project7 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project7 .pro7-des {
+    margin-top: 2.5vh;
+    text-align: left; }
+  .modal-content .project8 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 3px #fff solid; }
+    .modal-content .project8 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project8 .pro8-des {
+    margin-top: 2.5vh;
+    text-align: left; }
+  .modal-content .project9 img,
+  .modal-content .project10 img,
+  .modal-content .project11 img {
+    margin-top: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    border: 3px #fff solid; }
+    .modal-content .project9 img:hover,
+    .modal-content .project10 img:hover,
+    .modal-content .project11 img:hover {
+      opacity: 0.5;
+      border-color: #e0dd0d;
+      transition: all 0.5s ease-out; }
+  .modal-content .project9 .pro9-des,
+  .modal-content .project9 .pro10-des,
+  .modal-content .project9 .pro11-des,
+  .modal-content .project10 .pro9-des,
+  .modal-content .project10 .pro10-des,
+  .modal-content .project10 .pro11-des,
+  .modal-content .project11 .pro9-des,
+  .modal-content .project11 .pro10-des,
+  .modal-content .project11 .pro11-des {
+    margin-top: 2.5vh;
+    text-align: left; }
+
+.closeBtn {
+  color: #fff;
+  float: right;
+  margin-right: 5vh;
+  font-size: 50px; }
+  .closeBtn:hover, .closeBtn:focus {
+    color: #e0dd0d;
+    text-decoration: none;
+    cursor: pointer; }
+
+.exp-info .exp-head {
+  width: 100%;
+  background: #1a1a1a;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.exp-info .exp-detail {
+  margin-top: 3vh;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.exp-info .follow-me {
+  margin-top: 5vh;
+  text-align: center; }
+  .exp-info .follow-me:hover {
+    background: #1a1a1a; }
+
+.devlog-info {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+  .devlog-info .title {
+    background: #1a1a1a; }
+  .devlog-info .note {
+    font-size: 1.2rem; }
+  .devlog-info .game-dev-decisions {
+    text-align: left;
+    font-size: 1.2rem; }
+  .devlog-info .gameflow-detail {
+    text-align: left;
+    font-size: 1.2rem; }
+  .devlog-info .con-ref {
+    margin-top: 5vh;
+    text-align: center; }
+    .devlog-info .con-ref:hover {
+      background: #1a1a1a; }
+  .devlog-info .ref-img {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: grid;
+    justify-items: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 0.5fr); }
+    .devlog-info .ref-img img {
+      width: 100%;
+      border: 3px #fff solid; }
+      .devlog-info .ref-img img:hover {
+        opacity: 0.5;
+        border-color: #e0dd0d;
+        transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes .coninfo {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 5rem;
+    transition: all 0.5s ease-out; }
+    .boxes .coninfo:hover {
+      background: #e0dd0d;
+      color: #000; }
+      .boxes .coninfo:hover span {
+        color: #000; }
+  .boxes .quote {
+    width: 100%;
+    margin-top: 15vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+    .boxes .quote:hover {
+      background: #1a1a1a; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #e0dd0d;
+    color: #000; }
+
+.btn-dark {
+  background: #333333;
+  color: #fff; }
+
+.btn-light {
+  background: gray;
+  color: #333; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #4f4e05;
+  color: #f8f8f8;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 80vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+    .menu-nav .navfont {
+      font-size: 75%; }
+  .menu-branding {
+    height: 20vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  .devlog-info .ref-img {
+    justify-items: center;
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .boxes .coninfo {
+    font-size: 1.5rem; }
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
